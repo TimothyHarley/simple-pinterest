@@ -27,13 +27,11 @@ const writePins = (pins) => {
 }
 
 const initialPinView = (boardId) => {
-    loadPinsForBoard(boardId)
-        .then(data => {
+    loadPinsForBoard(boardId).then(data => {
             console.log(data)
             writePins(data);
             bindEvents();
-        })
-        .catch(error => {
+        }).catch(error => {
             console.error('things messed up in pins', error)
         })
     

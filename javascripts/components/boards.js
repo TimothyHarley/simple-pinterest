@@ -30,7 +30,6 @@ const writeBoards = (boards) => {
 
 const initializeBoardView = () => {
     loadBoards().then((boards) => {
-        
         return loadPinsOnBoards(boards);
     }).then((boardsWithPins) => {
         writeBoards(boardsWithPins);
